@@ -15,7 +15,7 @@ export function Header() {
         return () => window.removeEventListener('scroll', handleScroll)
     }, [])
 
-    const shadowClass = Y > 20 ? 'shadow-lg' : ''
+    const shadowClass = Y > 20 ? 'shadow-md' : ''
     const bgClass = Y > 20 ? 'bg-white' : 'bg-transparent'
 
     return (
