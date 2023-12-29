@@ -1,7 +1,7 @@
 export function About () {
 
     return (
-        <section>
+        <section className="h-[2000px]">
             
         </section>
     )

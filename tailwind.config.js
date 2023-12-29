@@ -13,7 +13,7 @@ export default {
         'quicksand': ['QuickSand', 'sans-serif']
       },
       backgroundImage: {
-        'hero-pattern': "url('/tea.jpg')"
+        'hero-pattern': "url('./tea.jpg')"
       }
     },
     screens: {
