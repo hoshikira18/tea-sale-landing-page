@@ -18,14 +18,23 @@ export function Header() {
     const shadowClass = Y > 20 ? 'shadow-md' : ''
     const bgClass = Y > 20 ? 'bg-white' : 'bg-transparent'
 
+    const [menuOpen, setMenuOpen] = useState(false);
+
     return (
         <section className={`fixed w-full transition-all ${shadowClass} ${bgClass}`}>
-            <div className="w-[1170px] mx-auto p-5 flex justify-between">
-                <div className="w-28 md:w-40">
-                    <img src={Logo} alt="logo image" />
+            <div className="xl:w-[1170px] lg:w-[970px] mx-auto p-5 flex flex-col lg:flex-row justify-between transition-all">
+                <div className="w-full flex justify-between">
+                    <a href="#home">
+                        <img src={Logo} alt="logo image" className="w-28 lg:w-40" />
+                    </a>
+                    <div className="lg:hidden h-full flex flex-col space-y-1 cursor-pointer" onClick={() => setMenuOpen(!menuOpen)}>
+                        <span className="bg-primary h-1.5 w-8 rounded inline-block"></span>
+                        <span className="bg-primary h-1.5 w-8 rounded inline-block"></span>
+                        <span className="bg-primary h-1.5 w-8 rounded inline-block"></span>
+                    </div>
                 </div>
 
-                <Nav />
+                <Nav isOpen={menuOpen} />
             </div>
         </section>
     )
