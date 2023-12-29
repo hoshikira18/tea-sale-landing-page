@@ -8,6 +8,9 @@ export default {
     extend: {
       colors: {
         'primary': '#b2572b'
+      },
+      fontFamily: {
+        'quicksand': ['QuickSand', 'sans-serif']
       }
     },
   },

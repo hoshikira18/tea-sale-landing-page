@@ -1,8 +1,8 @@
 export function Hero () {
 
     return (
-        <div className="h-[2000px] text-6xl">
-            test
+        <div className="h-[2000px]">
+
         </div>
     )
 }

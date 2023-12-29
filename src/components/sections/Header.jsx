@@ -20,8 +20,8 @@ export function Header() {
 
     return (
         <section className={`fixed w-full transition-all ${shadowClass} ${bgClass}`}>
-            <div className="w-[1170px] mx-auto py-5 flex justify-between">
-                <div className="w-40">
+            <div className="w-[1170px] mx-auto p-5 flex justify-between">
+                <div className="w-28 md:w-40">
                     <img src={Logo} alt="logo image" />
                 </div>
 
