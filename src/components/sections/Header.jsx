@@ -21,7 +21,7 @@ export function Header() {
 
     return (
         <section
-            className={`fixed w-full transition-all ${shadowClass} ${bgClass}`}
+            className={`z-10 fixed w-full transition-all ${shadowClass} ${bgClass}`}
         >
             <div className="mx-auto flex flex-col justify-between p-5 transition-all lg:w-[970px] lg:flex-row xl:w-[1170px]">
                 <div className="flex w-full justify-between">
