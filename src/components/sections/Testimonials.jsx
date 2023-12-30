@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import Image from '/Testimonials/phamnhatvuong.jpg';
 
 export function Testimonials() {
     const customer = [
@@ -7,16 +6,19 @@ export function Testimonials() {
             name: 'Phạm Nhật Vượng',
             comment:
                 '"Không chỉ là việc tách trà, mà bạn còn tạo ra một trải nghiệm tinh tế. Từ cách bạn chọn lá trà đến cách bạn phục vụ, tất cả đều rất chuyên nghiệp."',
+            image: "/Testimonials/phamnhatvuong.jpg"
         },
         {
-            name: 'Phạm Nhật Vượng 2',
+            name: 'Shark Minh Beta',
             comment:
                 '"Cảm ơn bạn vì sự chăm sóc tỉ mỉ trong việc tách trà. Mỗi lần uống trà, tôi thấy như mình đang thưởng thức một tác phẩm nghệ thuật."',
+                image: "/Testimonials/minhbeta.webp"
         },
         {
-            name: 'Phạm Nhật Vượng 3',
+            name: 'Shark Hùng Anh',
             comment:
                 '"Tôi không chỉ uống trà, mà còn trải nghiệm một thời gian yên bình và tận hưởng mỗi giọt trà được tách ra bởi bạn. Điều này thực sự là một trải nghiệm độc đáo."',
+                image: "/Testimonials/sharkhunganh.jpeg"
         },
     ];
 
@@ -33,14 +35,14 @@ export function Testimonials() {
     }, []);
 
     return (
-        <section className="flex h-[600px] w-full items-center bg-primary">
-            <div className="relative mx-auto w-1/2 py-20">
-                <div className=" rounded-lg bg-[#eeeeee] px-12 py-20 font-quicksand text-lg font-medium">
+        <section id="testimonials" className="flex w-full items-start bg-primary">
+            <div className="relative mx-auto lg:w-3/5 py-20 px-5">
+                <div className=" rounded-lg bg-[#eeeeee] lg:px-12 px-8 pt-20 pb-10 font-quicksand text-lg font-bold">
                     <p>{content.comment}</p>
-                    <p className='font-quicksand text-primary font-bold mt-2'> ~ {content.name} ~</p>
+                    <p className='font-quicksand text-primary text-xl font-bold mt-2'> ~ {content.name} ~</p>
                 </div>
                 <img
-                    src={Image}
+                    src={content.image}
                     alt=""
                     className="absolute top-4 mx-10 h-32 w-32 rounded-full border-8 border-[#eeeeee] object-cover"
                 />
